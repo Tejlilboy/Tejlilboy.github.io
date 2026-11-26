@@ -8,7 +8,9 @@
    cover: path to a photo, or "" to show the animated robot-eye placeholder.
    hidden: true keeps a project in this file but off the site.
    ===================================================================== */
-window.PROJECTS = [
+import type { Project } from "./types";
+
+export const projects: Project[] = [
 
   /* ------------------------------------------------------------------ */
   {
@@ -16,7 +18,7 @@ window.PROJECTS = [
     title: "Quadbot",
     status: "completed",
     tagline: "Eight-servo quadruped with a custom power PCB, hand-written servo driver and a phone controller.",
-    cover: "images/quadbot/hero.jpg",
+    cover: "/images/quadbot/hero.jpg",
     tags: ["KiCad", "PCB", "ESP32", "Firmware", "Servos", "Web App", "3D Printing"],
     links: [
       { label: "GitHub repo", url: "https://github.com/Tejlilboy/QuadBot" }
@@ -49,12 +51,12 @@ window.PROJECTS = [
         solution: "A 0.5 s deadman timer releases all inputs if the phone goes quiet, and the face shows a 'connection lost' expression after 4 s. Only one phone can drive at a time." }
     ],
     gallery: [
-      { src: "images/quadbot/hero.jpg", caption: "Quadbot with its OLED eyes lit" },
-      { src: "images/quadbot/schematic.jpg", caption: "Power distribution schematic (KiCad)" },
-      { src: "images/quadbot/pcb-layout.jpg", caption: "2-layer PCB layout" },
-      { src: "images/quadbot/pcb-unsoldered.jpg", caption: "Bare boards back from the fab" },
-      { src: "images/quadbot/pcb-soldered.jpg", caption: "Assembled power board" },
-      { src: "images/quadbot/web-app.jpg", caption: "Phone web controller: dual joysticks + trick buttons" }
+      { src: "/images/quadbot/hero.jpg", caption: "Quadbot with its OLED eyes lit" },
+      { src: "/images/quadbot/schematic.jpg", caption: "Power distribution schematic (KiCad)" },
+      { src: "/images/quadbot/pcb-layout.jpg", caption: "2-layer PCB layout" },
+      { src: "/images/quadbot/pcb-unsoldered.jpg", caption: "Bare boards back from the fab" },
+      { src: "/images/quadbot/pcb-soldered.jpg", caption: "Assembled power board" },
+      { src: "/images/quadbot/web-app.jpg", caption: "Phone web controller: dual joysticks + trick buttons" }
     ]
   },
 
@@ -101,7 +103,7 @@ window.PROJECTS = [
     title: "Gripper Arm",
     status: "completed",
     tagline: "My first robot: a five-servo, dual-joystick robotic arm on a custom Arduino Nano PCB.",
-    cover: "images/gripper/hero.jpg",
+    cover: "/images/gripper/hero.jpg",
     tags: ["KiCad", "PCB", "Arduino", "Firmware", "Servos", "3D Printing"],
     links: [
       { label: "GitHub repo", url: "https://github.com/Tejlilboy/Gripper" }
@@ -129,13 +131,13 @@ window.PROJECTS = [
         solution: "Servos run from a dedicated 5 A buck converter sized for a five-servo stall, with a shared ground." }
     ],
     gallery: [
-      { src: "images/gripper/hero.jpg", caption: "Arm with its joystick controller box" },
-      { src: "images/gripper/side.jpg", caption: "Side view" },
-      { src: "images/gripper/schematic.jpg", caption: "Schematic (KiCad)" },
-      { src: "images/gripper/pcb-layout.jpg", caption: "PCB layout" },
-      { src: "images/gripper/pcb-3d.jpg", caption: "3D board preview" },
-      { src: "images/gripper/pcb-unsoldered.jpg", caption: "Bare board" },
-      { src: "images/gripper/pcb-soldered.jpg", caption: "Assembled board in the controller box" }
+      { src: "/images/gripper/hero.jpg", caption: "Arm with its joystick controller box" },
+      { src: "/images/gripper/side.jpg", caption: "Side view" },
+      { src: "/images/gripper/schematic.jpg", caption: "Schematic (KiCad)" },
+      { src: "/images/gripper/pcb-layout.jpg", caption: "PCB layout" },
+      { src: "/images/gripper/pcb-3d.jpg", caption: "3D board preview" },
+      { src: "/images/gripper/pcb-unsoldered.jpg", caption: "Bare board" },
+      { src: "/images/gripper/pcb-soldered.jpg", caption: "Assembled board in the controller box" }
     ]
   },
 

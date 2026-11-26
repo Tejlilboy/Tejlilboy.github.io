@@ -2,7 +2,9 @@
    PROFILE — your name, links, bio, skills and experience.
    Edit the text between the quotes. Leave a value as "" to hide it.
    ===================================================================== */
-window.PROFILE = {
+import type { Profile } from "./types";
+
+export const profile: Profile = {
   name: "Tejwant Lilboy",
   role: "Computer Engineering @ City Tech",
   school: "New York City College of Technology (CUNY)",
@@ -13,8 +15,8 @@ window.PROFILE = {
   github: "https://github.com/Tejlilboy",
   linkedin: "",         // e.g. "https://www.linkedin.com/in/your-name"
 
-  // ---- Resume: drop your PDF in the /resume folder with this exact name ----
-  resume: "resume/Tejwant-Lilboy-Resume.pdf",
+  // ---- Resume: drop your PDF in the public/resume folder with this exact name ----
+  resume: "/resume/Tejwant-Lilboy-Resume.pdf",
   resumeReady: true,    // set to false to hide the download button
 
   // ---- About ----

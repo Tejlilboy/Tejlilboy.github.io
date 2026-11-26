@@ -1,8 +1,10 @@
 /* =====================================================================
    BUILD LOG — short dated updates. Newest goes at the TOP.
-   project: the id of a project in projects.js (or "" for general news).
+   project: the id of a project in projects.ts (or "" for general news).
    ===================================================================== */
-window.UPDATES = [
+import type { Update } from "./types";
+
+export const updates: Update[] = [
   {
     date: "2026-11-25",
     project: "trackbot",
