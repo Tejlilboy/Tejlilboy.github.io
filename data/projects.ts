@@ -68,7 +68,9 @@ export const projects: Project[] = [
     tagline: "A tracked desk-robot companion with moods, memory and a forklift arm.",
     cover: "",
     tags: ["Fusion 360", "ESP32", "Motor Control", "Sensors", "Web App", "Firmware"],
-    links: [],
+    links: [
+      { label: "GitHub repo", url: "https://github.com/Tejlilboy/Trackbot" }
+    ],
     progress: "CAD done · firmware first draft written · custom PCB and final assembly next · class demo planned",
     overview: [
       "Trackbot is a small tracked robot that lives on a desk and has a personality, in the spirit of Anki's Cozmo. It's built on Quadbot's body with a drivetrain and track system I designed from scratch.",
