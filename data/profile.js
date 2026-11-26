@@ -15,7 +15,7 @@ window.PROFILE = {
 
   // ---- Resume: drop your PDF in the /resume folder with this exact name ----
   resume: "resume/Tejwant-Lilboy-Resume.pdf",
-  resumeReady: false,   // set to true once the PDF is in place
+  resumeReady: true,    // set to false to hide the download button
 
   // ---- About ----
   bio: [

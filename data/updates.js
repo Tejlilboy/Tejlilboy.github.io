@@ -5,8 +5,8 @@
 window.UPDATES = [
   {
     date: "2026-11-25",
-    project: "pip",
-    title: "Pip: firmware first draft done",
+    project: "trackbot",
+    title: "Trackbot: firmware first draft done",
     text: "CAD is finished, including the custom 35-link tracks. The first full draft of the firmware is written. Next: the custom power PCB and final assembly."
   },
   {

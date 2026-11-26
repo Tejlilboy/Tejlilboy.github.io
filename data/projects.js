@@ -60,8 +60,8 @@ window.PROJECTS = [
 
   /* ------------------------------------------------------------------ */
   {
-    id: "pip",
-    title: "Pip",
+    id: "trackbot",
+    title: "Trackbot",
     status: "in-progress",
     tagline: "A tracked desk-robot companion with moods, memory and a forklift arm.",
     cover: "",
@@ -69,14 +69,14 @@ window.PROJECTS = [
     links: [],
     progress: "CAD done · firmware first draft written · custom PCB and final assembly next · class demo planned",
     overview: [
-      "Pip (repo name: Trackbot) is a small tracked robot that lives on a desk and has a personality, in the spirit of Anki's Cozmo. It's built on Quadbot's body with a drivetrain and track system I designed from scratch.",
-      "Pip has moods, remembers its day across power-offs, naps during a study timer, mirrors your arm for high fives, and gets stubborn when it's angry."
+      "Trackbot is a small tracked robot that lives on a desk and has a personality, in the spirit of Anki's Cozmo. It's built on Quadbot's body with a drivetrain and track system I designed from scratch.",
+      "Trackbot has moods, remembers its day across power-offs, naps during a study timer, mirrors your arm for high fives, and gets stubborn when it's angry."
     ],
     built: [
       "Complete Fusion 360 model, including a custom 35-link-per-side track system based on Lego Technic-style treads",
       "Drivetrain: two N20 90° worm-gear motors (one per side) on a DRV8833 driver",
       "Power: 2S Li-ion → 3 A buck → 5 V rail → XIAO ESP32-S3, with a custom PCB planned",
-      "Phone web app: dual joysticks (drive + forklift), mood rings for happiness, sadness and anger, manual override, live 8×8 ToF view, music streaming and a focus timer where Pip naps",
+      "Phone web app: dual joysticks (drive + forklift), mood rings for happiness, sadness and anger, manual override, live 8×8 ToF view, music streaming and a focus timer where Trackbot naps",
       "Behaviors: daily routine with memory across power-offs, arm mirroring and high fives, sneezes, hiccups and zoomies"
     ],
     parts: [
@@ -90,7 +90,7 @@ window.PROJECTS = [
       { problem: "Off-the-shelf tracks didn't fit the body or the motor layout.",
         solution: "I modeled my own track system in Fusion 360 (35 links per side) around Technic-style treads and the worm-gear motors." },
       { problem: "Making a robot feel alive, not just remote-controlled.",
-        solution: "The 8×8 ToF sensor gives Pip 'sight' for hand tracking and wander mode, and mood values drift with how it's treated." }
+        solution: "The 8×8 ToF sensor gives Trackbot 'sight' for hand tracking and wander mode, and mood values drift with how it's treated." }
     ],
     gallery: []
   },
@@ -148,14 +148,14 @@ window.PROJECTS = [
     cover: "",
     tags: ["ESP32", "LLM", "Audio", "Sensors"],
     links: [],
-    progress: "Next up after Pip",
+    progress: "Next up after Trackbot",
     overview: [
       "Deskbot is a stationary companion that acts as a physical extension an LLM can talk through. It listens, speaks, shows expressions on a color screen and follows a person's movement around the desk."
     ],
     built: [
       "Full-size ESP32 with a 2.7\" color TFT for expressions",
       "Microphone and speaker for voice conversation with an LLM",
-      "Pip-style sensors to track a person's movement",
+      "Trackbot-style sensors to track a person's movement",
       "A single USB cable carries both power and data"
     ],
     parts: [
@@ -229,14 +229,14 @@ window.PROJECTS = [
   {
     id: "dronebot",
     title: "Dronebot",
-    status: "paused",
-    tagline: "A brushed-motor ESP32 micro drone, paused in favor of Deskbot.",
+    status: "upcoming",
+    tagline: "A brushed-motor micro drone with a flight controller I build myself on an ESP32.",
     cover: "",
     tags: ["ESP32", "Flight Control"],
     links: [],
-    progress: "Paused",
+    progress: "Concept",
     overview: [
-      "A small brushed-motor quadcopter with an ESP32 flight controller. I already fly BetaFPV micro FPV quads, and this project is about building the flight controller side myself. It's on hold while I build Deskbot."
+      "A small brushed-motor quadcopter with an ESP32 flight controller. I already fly BetaFPV micro FPV quads, and this project is about building the flight controller side myself."
     ],
     built: [],
     parts: [],

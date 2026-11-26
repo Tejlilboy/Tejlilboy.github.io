@@ -71,15 +71,15 @@ Any section that's empty (`[]`) is skipped automatically.
 
 ## 3. Add photos
 
-1. Make a folder: `images/<project-id>/` (e.g. `images/pip/`).
+1. Make a folder: `images/<project-id>/` (e.g. `images/trackbot/`).
 2. Drop photos in. **Keep them small** (~1400 px wide, under ~300 KB) so the site stays fast on phones. Phone photos are often 5–13 MB; shrink them first with any of:
    - Windows **Photos** app → `…` → *Resize image* → *M*
    - https://squoosh.app (free, in the browser): set width to 1400, quality 80
 3. Reference them in `projects.js`:
    ```js
-   cover: "images/pip/hero.jpg",
+   cover: "images/trackbot/hero.jpg",
    gallery: [
-     { src: "images/pip/cad-render.jpg", caption: "Fusion 360 render" },
+     { src: "images/trackbot/cad-render.jpg", caption: "Fusion 360 render" },
    ]
    ```
    Use lowercase file names with dashes, no spaces (`pcb-soldered.jpg`).
@@ -92,8 +92,8 @@ Open `data/updates.js` and add a block **at the top**:
 ```js
 {
   date: "2026-12-01",
-  project: "pip",                 // a project id, or "" for general news
-  title: "Pip: PCB ordered",
+  project: "trackbot",            // a project id, or "" for general news
+  title: "Trackbot: PCB ordered",
   text: "Sent the power board to the fab over Thanksgiving."
 },
 ```
@@ -125,7 +125,7 @@ Your site will live at **https://tejlilboy.github.io/**.
 **Updating later:** edit files, then
 ```bash
 git add .
-git commit -m "Add Pip CAD renders"
+git commit -m "Add Trackbot CAD renders"
 git push
 ```
 The live site updates within a minute or two.
