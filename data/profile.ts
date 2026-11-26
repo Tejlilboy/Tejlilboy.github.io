@@ -10,10 +10,10 @@ export const profile: Profile = {
   school: "New York City College of Technology (CUNY)",
   tagline: "I design, build and program small robots: custom PCBs, ESP32 firmware, CAD and the apps that drive them.",
 
-  // ---- Contact (placeholders: replace when ready) ----
-  email: "",            // e.g. "you@example.com"  (empty = shows "coming soon")
+  // ---- Contact (leave a value as "" to show "coming soon") ----
+  email: "tejlilboy@gmail.com",
   github: "https://github.com/Tejlilboy",
-  linkedin: "",         // e.g. "https://www.linkedin.com/in/your-name"
+  linkedin: "https://www.linkedin.com/in/tejwant-lilboy-700810382",
 
   // ---- Resume: drop your PDF in the public/resume folder with this exact name ----
   resume: "/resume/Tejwant-Lilboy-Resume.pdf",
@@ -34,8 +34,8 @@ export const profile: Profile = {
 
   experience: [
     {
-      title: "Part-time Team Member",   // change to your real job title
-      org: "Tax firm",
+      title: "Part-time Administrative Assistant",
+      org: "Loyalty Tax Services, Queens, NY",
       dates: "~5 years, part-time",
       text: "Worked on a team handling client files each tax season: organizing documents, keeping records accurate, and hitting firm deadlines alongside coursework."
     }

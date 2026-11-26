@@ -51,9 +51,6 @@ export default async function ProjectPage({ params }: Props) {
           <h1>{p.title}</h1>
           <p className="lead">{p.tagline}</p>
           {p.progress && p.status !== "completed" && <p className="progress-line">status: {p.progress}</p>}
-          <ul className="tags">
-            {p.tags.map((t) => <li key={t}>{t}</li>)}
-          </ul>
           <div className="detail-cover">
             {p.cover ? (
               // eslint-disable-next-line @next/next/no-img-element
