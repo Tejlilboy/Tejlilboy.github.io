@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project · Tejwant Lilboy</title>
+  <meta name="theme-color" content="#07090c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Crect x='6' y='10' width='8' height='12' rx='3' fill='%236ff3ff'/%3E%3Crect x='18' y='10' width='8' height='12' rx='3' fill='%236ff3ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="project">
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Home"><span class="brand-eyes" aria-hidden="true"><i></i><i></i></span><span id="brand-name">tejwant.lilboy</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#projects">projects</a></li>
+      <li><a href="index.html#log">build log</a></li>
+      <li><a href="index.html#about">about</a></li>
+      <li><a href="index.html#resume">resume</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="project-root"></main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <button class="close" id="lb-close">close ✕</button>
+  <button class="nav-btn prev" id="lb-prev" aria-label="Previous image">‹</button>
+  <button class="nav-btn next" id="lb-next" aria-label="Next image">›</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <span id="footer-name">© Tejwant Lilboy</span>
+    <span><a href="index.html#projects">← all projects</a></span>
+  </div>
+</footer>
+
+<script src="data/profile.js"></script>
+<script src="data/projects.js"></script>
+<script src="data/updates.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
