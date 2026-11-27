@@ -62,6 +62,48 @@ export const projects: Project[] = [
 
   /* ------------------------------------------------------------------ */
   {
+    id: "famlink",
+    title: "FamLink",
+    status: "completed",
+    tagline: "An end-to-end encrypted messenger for my family's Android phones and tablets, paired in person by QR code.",
+    cover: "",
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Encryption", "Firebase", "Cloudflare Workers"],
+    links: [
+      { label: "GitHub repo", url: "https://github.com/Tejlilboy/famlink" }
+    ],
+    overview: [
+      "FamLink is a private messenger built for one family rather than the public. There's no sign-up, phone number, username or user search: you can only message someone you've paired with in person by scanning their QR code.",
+      "Every message, photo, voice note and location is encrypted on the phone before it leaves. The server only ever relays ciphertext and deletes each message once it's been delivered. Because it doesn't need a SIM, it also works on Wi-Fi-only tablets."
+    ],
+    built: [
+      "End-to-end encryption with libsodium: each device generates an X25519 keypair on first launch, and messages are sealed with crypto_box (XSalsa20-Poly1305)",
+      "Private keys never leave the device and are wrapped by an AES key held in the Android Keystore; cloud backup is disabled",
+      "In-person pairing by QR code, plus a single-use FAM-XXXX-XXXX code that expires after 5 minutes, with 30-digit safety numbers to catch a man-in-the-middle",
+      "Encrypted text, photos (resized, EXIF/GPS stripped), 60-second voice notes, one-time location sharing, reactions and delivered/read ticks",
+      "Firestore security rules so only trusted contacts can write to your inbox and users can't be listed, with automated tests against the Firestore emulator",
+      "A Cloudflare Worker that verifies the sender and sends a content-free \"you have mail\" push, so notification text is built on the phone and Firebase stays on the free plan"
+    ],
+    parts: [
+      ["Platform", "Android 8.0+ (sideloaded APK)"],
+      ["App", "Kotlin, Jetpack Compose, Room"],
+      ["Encryption", "libsodium via Lazysodium, Android Keystore"],
+      ["Relay / storage", "Firebase Firestore + Anonymous Auth"],
+      ["Push", "Firebase Cloud Messaging, sent from a Cloudflare Worker"],
+      ["QR codes", "ZXing (generate), ML Kit + CameraX (scan)"]
+    ],
+    challenges: [
+      { problem: "Encryption can't protect you if you're handed the wrong public key in the first place.",
+        solution: "Pairing happens in person by scanning a QR code, so keys never pass through the server. For pairing codes, which do, both people compare a 30-digit safety number derived from both keys." },
+      { problem: "Sending push notifications normally needs Firebase Cloud Functions, which require a paid plan.",
+        solution: "A small Cloudflare Worker checks the sender's Firebase ID token and trust relationship, then sends a data-only FCM push. Both services stay on their free tiers." },
+      { problem: "Staying inside Firestore's free daily limits while adding photos, voice notes and read receipts.",
+        solution: "Messages are deleted after delivery so the inbox never re-downloads history, there's only one listener per device, pushes are debounced, and reactions and receipts skip the push entirely. That works out to roughly 12,000 messages a day for free." }
+    ],
+    gallery: []
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
     id: "trackbot",
     title: "Trackbot",
     status: "in-progress",
